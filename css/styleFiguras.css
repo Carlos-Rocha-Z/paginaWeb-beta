@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@300;500;700 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#131313 ;
+    flex-direction: column;
+} */
+.container-figuras {
+    padding-top:120px;
+    height: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 82vh;
+    transform-style: preserve-3d;
+    
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 80px;
+    background-color: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    box-shadow: 0px 5px 20px -5px #29F2A9;
+}
+
+.container .box::before{
+    content: 'Area';
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.05s;
+}
+.container .box::after{
+    content: 'Perimetro';
+    position: absolute;
+    bottom: 110px;
+    left: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.05s;
+}
+.container .box .LogoHeader-container{
+    display: flex;
+    margin: 15px;
+    width: 300px;
+}
+.container .box:hover::before,
+.container .box:hover::after{
+    opacity: 0.1;
+}
+
+.container .box .name
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #29F2A9;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate(0,0,75px);
+    transition: 0.05s;
+    opacity: 0;
+    z-index: 10;
+}
+.container .box:hover .name{
+    top:40px;
+    opacity: 1;
+}
+.box .label-ladoA{
+    position: absolute;
+    font-weight: 700;
+    top: 140px;
+    color:#29F2A9 ;
+    width: 100%;
+    text-align: center; 
+}
+.box .label-ladoP{
+    position: absolute;
+    font-weight: 700;
+    bottom: 120px;
+    color:#29F2A9 ;
+    width: 100%;
+    text-align: center; 
+}
+.box .input-figure{
+    
+    position: absolute;
+    left: 64px;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: #29F2A9;
+    padding: 7px 0;
+    background: transparent;
+    -webkit-appearance: none;
+    transition: border-color 0.2s;
+}
+
+.box #inputCuadrado{
+    bottom: 80px;
+}
+
+.box #inputLadoT1{
+    left:30px;
+    width: 50px;
+    bottom: 80px;
+}
+.box #inputLadoT2{
+    left:93px;
+    width: 50px;
+    bottom: 80px;
+}
+.box #inputBaseT3{
+    left:155px;
+    width: 50px;
+    bottom: 80px;
+}
+
+.box #inputAlturaT{
+    left:218px;
+    width: 50px;
+    bottom: 80px;
+}
+.box #inputCirculo{
+    bottom: 80px;
+}
+
+.box .btn-Perimetro,
+.box .btn-area{
+    position: absolute;
+    bottom:0 ;
+    left: 50px;
+    transform-style: preserve-3d;
+    transform: translate(-50%,0,75px);
+    color:#000000 ;
+    background-color: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index:10 ;
+    cursor: pointer;
+}
+.box .btn-area{
+    left: 170px;
+}
+
+.container .box:hover .btn-Perimetro,
+.container .box:hover .btn-area{
+    bottom:30px;
+    opacity: 1;
+}
+
+.container .box .cuadrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 5%;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 1;
+    transform:translate3d(-50%,-50%,50px);
+}
+.container .box .figuraCuadrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100px;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style:preserve-3d;
+    transform:translate3d(-50%,-50%,50px) ;
+}
+
+.container .box:hover .figuraCuadrado{
+    transform:translate3d(-50%,-50%,100px) rotate(-40deg);
+}
+.container .box:nth-child(1n) .cuadrado,
+.container .box:nth-child(1n) .btn-Perimetro,
+.container .box:nth-child(1n) .btn-area{
+    background-color:#29F2A9 ;
+}

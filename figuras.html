@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geometricas</title>
+    <link rel="stylesheet" href="./css/styleFiguras.css">
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/font/flaticon.css" />
+    <link rel="stylesheet" href="./css/media-queries.css">
+</head>
+<body>
+ <!--    <header>
+        <h1>Figuras Geométricas</h1>
+        <p>Calculo de Área y Perimetro </p>
+    </header> -->
+    <header>
+      <section class="header-icons-container">
+        <div class="icons">
+          <a href="/"><span class="flaticon-001-facebook"></span></a>
+          <a href="/"><span class="flaticon-002-twitter"></span></a>
+          <a href="/"><span class="flaticon-011-instagram"></span></a>
+          <a href="/"><span class="flaticon-010-linkedin"></span></a>
+          <a href="/"><span class="flaticon-008-youtube"></span></a>
+        </div>
+      </section>
+      <nav>
+        <section class="nav-logo-container">
+          <a href="./index.html"
+            ><img src="./assets/img/logo_completoCR.png" alt="logo de mi blog"
+          /></a>
+        </section>
+        <section class="profile-link">
+          <a href="./perfil.html">Sobre mi</a>
+        </section>
+      </nav>
+    </header>
+    <main class="main-figuras"> 
+      <div class="container-figuras">
+      <div class="container">
+          <div class="box">
+                  <div class="LogoHeader-container"><figure><img loading="lazy" src="./assets/img/logo_completoCR.png" alt="Logo Personal" height="25">
+                    <!-- </figure><figure class="LogoHeader-name"><img loading="lazy" src="https://static.platzi.com/ui/assets/image/logotipo-platzie69328f33899695e31fa.png" alt="Platzi Logo" height="25"></figure></div></a> --></div>
+              <h2 class="name">Cuadrado</h2>
+              <!-- <a href="#" class="calcularPerimetro">Calcular Perimetro</a> -->
+              <div class="cuadrado"></div>
+              <img src="./assets/img/cuadrado.png" class="cuadrado1d figuraCuadrado" alt="Figura de un cuadrado">
+            
+              <form action="">
+                <div class="container-form">
+                  <label class="label-ladoA" for="inputTriangulo">Para el Perimetro y el área <br/> digite el</label>
+                    <label class="label-ladoP" for="inputCuadrado">Lado del cuadrado: </label>
+                    <input class="input-figure" id="inputCuadrado" type="number" placeholder="Lado" />
+                    <button class="btn-Perimetro" type="button" onclick="calcularPerimetroCuadrado()">Perimetro</button>
+                    <button class="btn-area" type="button" onclick="calcularAreaCuadrado()">área</button>
+                </div>
+            </form> 
+          </div>
+          <div class="box">
+            <div class="LogoHeader-container"><figure><img loading="lazy" src="./assets/img/logo_completoCR.png" alt="Logo Personal" height="25">
+              <!-- </figure><figure class="LogoHeader-name"><img loading="lazy" src="https://static.platzi.com/ui/assets/image/logotipo-platzie69328f33899695e31fa.png" alt="Platzi Logo" height="25"></figure></div></a> --></div>
+        <h2 class="name">Triangulo</h2>
+        <!-- <a href="#" class="calcularPerimetro">Calcular Perimetro</a> -->
+        <div class="cuadrado"></div>
+        <img src="./assets/img/triangulo.png" class="figuraCuadrado" alt="Figura de un Triangulo">
+        <form action="">
+          <div class="container-form">
+            <label class="label-ladoA" for="inputTriangulo">Para el área <br/> solo base y altura: </label>
+              <label class="label-ladoP" for="inputTriangulo">Para perimetro <br/> Lado, Lado y Base: </label>
+              <input class="input-figure" id="inputLadoT1" type="number"  placeholder="Lado"/>
+              <input class="input-figure" id="inputLadoT2" type="number"  placeholder="Lado" />
+              <input class="input-figure" id="inputBaseT3" type="number" placeholder="Base" />
+              <input class="input-figure" id="inputAlturaT" type="number"  placeholder="Altura"/>
+              <button class="btn-Perimetro" type="button" onclick="calcularPerimetroTriangulo()">Perimetro</button>
+              <button class="btn-area" type="button" onclick="calcularAreaTriangulo()">área</button>
+          </div>
+      </form> 
+    </div>
+    <div class="box">
+      <div class="LogoHeader-container"><figure><img loading="lazy" src="./assets/img/logo_completoCR.png" alt="Logo Personal" height="25">
+        <!-- </figure><figure class="LogoHeader-name"><img loading="lazy" src="https://static.platzi.com/ui/assets/image/logotipo-platzie69328f33899695e31fa.png" alt="Platzi Logo" height="25"></figure></div></a> --></div>
+  <h2 class="name">Circulo</h2>
+  <!-- <a href="#" class="calcularPerimetro">Calcular Perimetro</a> -->
+  <div class="cuadrado"></div>
+  <img src="./assets/img/Circulo.png" class="figuraCuadrado" alt="figura de Circulo">
+  <form action="">
+    <div class="container-form">
+      <label class="label-ladoA" for="inputTriangulo">Para calcular <br/> el area y perimetro: </label>
+      <label class="label-ladoP" for="inputTriangulo">Digite <br/> el radio del circulo: </label>
+        <input class="input-figure" id="inputCirculo" type="number"/>
+        <button class="btn-Perimetro" type="button" onclick="calcularPerimetroCirculo()">Perimetro</button>
+        <button class="btn-area" type="button" onclick="calcularAreaCirculo()">área</button>
+    </div>
+  </div>
+
+  </main>
+
+    <script src="./js/figurasFunciones.js"> </script>
+
+    <script src="./js/vanilla-tilt.min.js"></script>
+    <script>
+        	VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400
+	});
+    </script>
+</body>
+</html>

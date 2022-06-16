@@ -1,0 +1,11 @@
+.hero{
+    grid-template-columns:minmax(300px, 500px);
+    justify-content: center;
+}
+.hero-image{
+
+    display: none;
+}
+.display-grid{
+    grid-template-columns: repeat(auto-fit, minmax(75px, 100px))
+}

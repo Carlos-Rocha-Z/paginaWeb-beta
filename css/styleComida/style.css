@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', 'sans-serif';
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    max-width: 1200px;
+    margin:0 auto;/* no tenga margen arriba o abajo y en los lados se centre */
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 550px;/* se le da un tamaño fijo a todas las filas que se creen de forma automatica */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    animation-name: girarb;
+    animation-duration: 50s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear ;
+
+}
+@keyframes girarb{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform:rotate(360deg);
+    }
+}
+.info{
+    align-self: center;/* alinea al contenido interno deacuerdo a la grilla */
+    padding-left: 25px;
+}
+.info-title{
+    color: #333;
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-bottom: 24px;
+}
+.info-content{
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 24px;
+}
+.info-button{
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fb8c00;
+    padding: 12px 24px;
+}
+.dishes{
+    margin:100px 0;
+}
+.dishes-title{
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.dishes-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 250px));/* auto-fit es para hacerlo responsive */
+    grid-auto-rows: 1fr;
+    gap: 15px;
+    justify-content: center;
+}
+.dishes-item{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.dishes-item__big{
+    grid-area: 1 / 1 / 3 / 3;/* para que una imagen me ocupe 2 filas y 2 columnas , contando los valores de las lineas donde comienzan y terminan  */
+}
+.menu{
+    margin-bottom: 200px;
+}
+.menu-title{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-grid{
+    display: grid;
+    padding: 25px;
+    justify-content: center;
+    gap: 25px;
+    grid-template-columns:repeat(auto-fit, 150px);
+}
+.menu-grid-item{
+    background-color: rgb(255, 229, 219);
+    padding: 15px;
+    border-radius: 10px;
+}
+.menu-grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

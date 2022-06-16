@@ -1,0 +1,345 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+:root{
+    --header:#193540;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+
+} 
+a{
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+.home-body{/* para quitar el scroll de la pagina principal */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.grid-container{
+    max-width: 1400px;/* maximo de ancho del contenedor */
+    margin: auto;/* centrar el espacio restante en derecha he izquierda para centrar el contenido*/
+}
+header{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50px;
+}
+header .header-icons-container{
+    width: 100%;
+    display: grid;
+    background-color: var(--header);
+    justify-content: flex-end;
+    align-items: center;
+}
+header .header-icons-container .icons{
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+header .icons span{
+    color: rgba(255, 255, 255, 0.363);
+}
+header .icons span:hover{
+    color: rgb(255, 255, 255);
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 0;
+}
+nav .nav-logo-container{
+    margin-left: 50px;
+}
+.nav-logo {
+    background-image: url(../assets/img/logo_completoCR.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+ nav .nav-logo-container img{
+    width: 200px;
+    margin-top: 10px;
+} 
+nav .profile-link{
+    display: flex;/* para poder ubicar bienmi texto en el centro y el lado derecho */
+    align-items: center;/* centrado a la mitad */
+    justify-content: flex-end;/* al lado derecho */
+    margin-right: 50px;
+}
+nav .profile-link a{
+    font-size: 2rem;
+    color: white;
+    border-bottom: 1px solid #29F2A9;;
+}
+.home-main{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 94.7vh;
+    background-image: url('../assets/img/fondoSVG.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-animation{
+    display: flex;
+    justify-content: center;
+}
+.home-animation lottie-player{
+    margin-top: 50px;
+    width: 80%;
+
+}
+.home-main section{
+    display: grid;
+    grid-column: 2;/* para que me ponga el texto en la segunda columna creada de 4frs */
+    justify-items: center;
+    height: 550px;
+/*     margin-top: 80px; */
+}
+.home-main-text{
+    font-family: 'roboto mono','monospace';
+    font-size: 3.5rem;
+    font-weight: 700px;
+    letter-spacing: 10px;
+    color: #73B1BF;
+    text-align: center;
+}
+.home-main-button{
+    width: 13 0px;
+    height: 50px;
+    box-shadow: 0px -1px 8px 4px #29f2a9;
+    background: var(--header);
+    display: grid;
+    align-items: center;
+}
+.home-main-button a{
+    font-weight: 700;
+    color:#73B1BF ;
+    font-size: 1.8rem;
+}
+.blogs-main{
+    display: grid;
+    background-image: url('../assets/img/fondo-blog.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.blogs-news-container{
+    background-color: rgba(0, 0, 0, 0.171);
+    margin-top: 180px;
+    padding: 0px 50px 40px;
+}
+.blogs-main-new{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+    color: rgb(255, 255, 255);
+}
+.blogs-main-new h3{
+    color: #29F2A9;
+    font-size: 2.7rem;
+}
+
+.blogs-news-img-container{
+    grid-column: 1;
+    justify-self: center; /* para centrar el contenido del grid */
+}
+.blogs-news-img-container lottie-player{
+   width: 100%;
+}
+.blogs-news-info-container {
+    grid-column: 2;
+}
+.blogs-news-info-container h2{
+    color: #29F2A9;
+}
+.blogs-news-info-container p{
+    margin-bottom: 35px;
+    font-size: 2rem;
+    line-height: 4rem;
+}
+.blogs-posts-container{
+    padding: 0 50px 40px;
+}
+.blogs-posts-container h3{
+    border-bottom: 1px solid #29F2A9;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.blogs-button{
+    border: 1px solid #29F2A9;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    color: #29F2A9;
+}
+.blogs-button:hover {
+    color: #fff;
+    box-shadow: 0 4px 16px #29F2A9;
+    transition: all 0.2 s ease;
+  }
+  .blogs-posts-container .post-container{
+      display: inline-block;/* para que se pongan de forma horizontal uno detras de otro*/
+      padding-left: 10px;
+      max-width: 30%;
+      margin-bottom: 50px;
+      color: white;
+  }
+  .blogs-posts-container .post-container h4{
+      margin-bottom: 35px;
+      color: #29F2A9;
+  }
+  .blogs-posts-container .post-container img{
+      width: 300px;
+  }
+  footer{
+      width: 100%;
+      height: 80px;
+      background-color: #193540;
+      border-top: 35px solid #23798C;
+      text-align: center;/* alinear el texto del footer */
+  }
+  footer p {
+      color: #29F2A9;
+      margin-top: 30px;
+  }
+  .blogpost-img-container{
+      padding: 120px 50px 40px;/* arriba 0 50px derecho izquierdo 40px abajo */
+  }
+  .blogpost-main{
+    background-image: url('../assets/img/2blogFondo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .blogpost-img-container lottie-player {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .blogpost-main-container{
+      padding: 0 50px 10px;
+      color: white;
+      font-size: 1.9rem;
+      background-color: rgba(0, 0, 0, 0.185);
+  }
+  .blogpost-main-container h3{
+      font-size: 3rem;
+      border-bottom: 1px solid #29F2A9;
+      color: #29F2A9;
+      padding-bottom: 20px;
+  }
+  .blogpost-main-container article h1{
+      font-size: 3.5rem;
+      color: #29F2A9;
+  }
+  .contact-main-container{
+      width: 100%;
+      min-height: 250px;
+      background-color: rgba(0, 0, 0, 0.418);
+      text-align: center;
+      padding-bottom: 50px;
+      color: white;
+  }
+  .contact-main-container div {
+      display: inline-block;/* para posicionar un div al lado del otro ya que por defecto son inline */
+      width: 49.5%;/* para poderlo dividir */
+      height: 100%;/* altura100% que es la dimencion de su padre */
+  }
+  .contact-main-container div a{
+      color: #29f2a9;
+      border-bottom: 1px solid #29F2A9;
+      padding-bottom: 5px;
+  }
+  .contact-main-container .contact-left, .contact-rigth{
+      text-align: initial;
+      margin-top: 85px;
+  }
+  .contact-main-container lottie-player{
+      display: inline-block;
+      width: 200px;
+  }
+  .profile-main{
+    background-image: url('../assets/img/fondoPerfil.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+  }
+  .profile-main-container{
+      padding: 250px 40px 70px;/* arriba abajo 70 izquierdo derecho 40px */
+      background-color: rgba(0, 0, 0, 0.363);
+      margin-bottom: 50px;
+  }
+  .profile-main-container img{
+      width: 320px;
+      margin-right: 30px;
+  }
+  .profile-main-container .profile-container{
+      display:flex
+  }
+  .profile-main-proyects{
+      padding: 0 50px 40px;
+  }
+  .profile-main-proyects h3{
+      border-bottom: 1px solid #29F2A9;
+      padding-bottom: 35px;
+      text-align: center;
+      font-size: 2.4rem;
+      color: #29F2A9;
+  }
+  .proyects-main-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+  }
+  .proyect-container{
+      padding: 0 10px;
+  }
+  .proyect-container h4 a{
+    color:#29F2A9;
+}
+  .proyect-container h4{
+      color:#29F2A9;
+      position: relative;
+      cursor: pointer;
+  }
+  .proyect-container h4::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #29F2A9;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+.proyect-container h4:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+   
+}
+.main-figuras{
+    background-image: url('../assets/img/fondoPerfil.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+  }
+  
